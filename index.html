@@ -3,64 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>潍坊澳腾启航 | 澳大利亚官方直通世界百强名校</title>
+    <title>Weifang Ao Teng | 澳大利亚官方直通世界百强名校</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-        /* 幻灯片淡入淡出效果 */
         .slide-active { opacity: 1; z-index: 10; transition: opacity 1s ease-in-out; }
         .slide-inactive { opacity: 0; z-index: 0; transition: opacity 1s ease-in-out; }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
-    <header class="bg-[#D22027] text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20 md:h-24">
-                
-                <div class="flex flex-col justify-center">
-                    <span class="font-bold text-lg md:text-2xl tracking-widest leading-tight">潍坊澳腾启航留学咨询服务有限公司</span>
-                    <span class="text-[10px] md:text-[11px] font-medium text-white/90 uppercase tracking-[0.15em] mt-1">Weifang Ao Teng Overseas Education Services Pty. Ltd.</span>
-                </div>
-                
-                <div class="hidden lg:flex items-center text-sm font-semibold tracking-wide gap-6">
-                    <span class="hover:underline cursor-pointer">官方合作洽谈</span>
-                    <span class="border-l border-white/30 pl-6 text-xl tracking-wider">186 5364 0006</span>
-                </div>
+    <div class="bg-[#D22027] text-white text-xs md:text-sm font-medium z-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-10 flex justify-between items-center">
+            <span class="lang-text" data-zh="澳大利亚政府首个高等教育 + 高中 MOU 合作项目" data-en="The First Australian Government Higher Ed + High School MOU Program">
+                澳大利亚政府首个高等教育 + 高中 MOU 合作项目
+            </span>
+            <div class="flex items-center gap-4 md:gap-6">
+                <span class="hidden md:inline">📞 186 5364 0006</span>
+                <button onclick="toggleLang()" id="langToggleBtn" class="flex items-center gap-1 hover:text-gray-200 transition font-bold bg-white/20 px-2 py-1 rounded">
+                    <span>🌐</span> English
+                </button>
             </div>
         </div>
-    </header>
+    </div>
 
-    <nav class="bg-[#333333] text-white border-b-4 border-[#D22027]">
+    <nav class="bg-white shadow-sm sticky top-0 z-40 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex space-x-8 h-12 items-center text-sm font-bold uppercase tracking-wider overflow-x-auto whitespace-nowrap">
-                <a href="#dilemma" class="hover:text-gray-300 transition">行业痛点</a>
-                <a href="#advantages" class="hover:text-gray-300 transition">核心优势</a>
-                <a href="#pathways" class="hover:text-gray-300 transition">精英矩阵</a>
-                <a href="#model" class="hover:text-gray-300 transition">培养模式</a>
-                <a href="#contact" class="hover:text-gray-300 transition">联系我们</a>
+            <div class="flex justify-between items-center h-20">
+                <div class="flex flex-col justify-center">
+                    <span class="font-black text-lg md:text-xl tracking-wider text-[#333333] lang-text" data-zh="潍坊澳腾启航留学咨询服务有限公司" data-en="Weifang Ao Teng Overseas Education Services">
+                        潍坊澳腾启航留学咨询服务有限公司
+                    </span>
+                    <span class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] mt-1">
+                        Weifang Ao Teng Overseas Education Services Pty. Ltd.
+                    </span>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-bold uppercase tracking-wider text-gray-600">
+                    <a href="#dilemma" class="hover:text-[#D22027] transition lang-text" data-zh="行业痛点" data-en="Challenges">行业痛点</a>
+                    <a href="#advantages" class="hover:text-[#D22027] transition lang-text" data-zh="核心优势" data-en="Advantages">核心优势</a>
+                    <a href="#pathways" class="hover:text-[#D22027] transition lang-text" data-zh="精英矩阵" data-en="Elite Pathways">精英矩阵</a>
+                    <a href="#model" class="hover:text-[#D22027] transition lang-text" data-zh="培养模式" data-en="Study Model">培养模式</a>
+                    <a href="#contact" class="bg-[#D22027] text-white px-5 py-2 rounded hover:bg-[#b01a20] transition shadow-md lang-text" data-zh="合作洽谈" data-en="Contact Us">合作洽谈</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <section class="relative h-[550px] md:h-[650px] lg:h-[750px] overflow-hidden bg-gray-900">
+    <section class="relative h-[500px] md:h-[650px] lg:h-[750px] overflow-hidden bg-gray-900">
         
         <div id="slide-0" class="absolute inset-0 slide-active">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop');"></div>
             <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
             <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center text-left">
-                <div class="inline-block bg-white text-[#D22027] px-3 py-1 text-xs md:text-sm font-bold tracking-widest uppercase mb-6 rounded-sm self-start">
-                    澳大利亚政府首个高中 MOU 合作项目
-                </div>
-                <h1 class="text-5xl md:text-7xl font-black text-white tracking-tight mb-4 leading-tight">
-                    破局升学内卷.<br />
-                    <span class="text-[#D22027]">直通世界百强名校.</span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tight mb-4 leading-tight lang-html" 
+                    data-zh="破局升学内卷.<br /><span class='text-[#D22027]'>直通世界百强名校.</span>" 
+                    data-en="Break the Fierce Competition.<br /><span class='text-[#D22027]'>Direct to Top 100 Universities.</span>">
+                    破局升学内卷.<br /><span class="text-[#D22027]">直通世界百强名校.</span>
                 </h1>
-                <p class="mt-4 text-lg md:text-2xl text-gray-200 max-w-2xl font-light mb-10">
+                <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl font-light mb-10 lang-text" 
+                   data-zh="携手阿德莱德大学 (QS 82) 与 TAFE SA，打造零风险、高确定性的国际化升学“护城河”。" 
+                   data-en="Partnering with Adelaide University (QS 82) and TAFE SA to build a zero-risk, high-certainty international education pathway.">
                     携手阿德莱德大学 (QS 82) 与 TAFE SA，打造零风险、高确定性的国际化升学“护城河”。
                 </p>
-                <a href="#contact" class="self-start bg-[#D22027] text-white font-bold text-lg px-8 py-4 uppercase tracking-wider hover:bg-[#b01a20] transition shadow-lg">
+                <a href="#contact" class="self-start bg-[#D22027] text-white font-bold text-sm md:text-lg px-8 py-4 uppercase tracking-wider hover:bg-[#b01a20] transition shadow-lg lang-text" data-zh="获取独家方案" data-en="Get Exclusive Plan">
                     获取独家方案
                 </a>
             </div>
@@ -70,19 +78,17 @@
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop');"></div>
             <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
             <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center text-left">
-                <div class="inline-block bg-[#D22027] text-white px-3 py-1 text-xs md:text-sm font-bold tracking-widest uppercase mb-6 rounded-sm self-start">
-                    王牌旗舰赛道
-                </div>
-                <h1 class="text-5xl md:text-7xl font-black text-white tracking-tight mb-4 leading-tight">
-                    高精尖 IT 直通车.<br />
-                    <span class="text-gray-300">紧握 AI 时代红利.</span>
+                <div class="inline-block bg-[#D22027] text-white px-3 py-1 text-xs font-bold tracking-widest uppercase mb-4 rounded-sm self-start lang-text" data-zh="王牌旗舰赛道" data-en="Flagship Program">王牌旗舰赛道</div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tight mb-4 leading-tight lang-html" 
+                    data-zh="高精尖 IT 直通车.<br /><span class='text-gray-300'>紧握 AI 时代红利.</span>" 
+                    data-en="Elite IT Pathway.<br /><span class='text-gray-300'>Seize the AI Era.</span>">
+                    高精尖 IT 直通车.<br /><span class="text-gray-300">紧握 AI 时代红利.</span>
                 </h1>
-                <p class="mt-4 text-lg md:text-2xl text-gray-200 max-w-2xl font-light mb-10">
+                <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl font-light mb-10 lang-text" 
+                   data-zh="跳过高三与预科，直通网络安全、软件开发等紧缺专业。直通 ACS 认证，毕业起薪高达 8-12 万澳币。" 
+                   data-en="Skip Year 12 and Foundation programs. Direct entry into high-demand majors like Cyber Security. ACS accredited with high starting salaries.">
                     跳过高三与预科，直通网络安全、软件开发等紧缺专业。直通 ACS 认证，毕业起薪高达 8-12 万澳币。
                 </p>
-                <a href="#pathways" class="self-start bg-white text-[#333333] font-bold text-lg px-8 py-4 uppercase tracking-wider hover:bg-gray-100 transition shadow-lg">
-                    探索精英矩阵
-                </a>
             </div>
         </div>
 
@@ -90,19 +96,17 @@
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop');"></div>
             <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
             <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center text-left">
-                <div class="inline-block bg-white text-[#D22027] px-3 py-1 text-xs md:text-sm font-bold tracking-widest uppercase mb-6 rounded-sm self-start">
-                    2+0.5+2 融合培养模式
-                </div>
-                <h1 class="text-5xl md:text-7xl font-black text-white tracking-tight mb-4 leading-tight">
-                    极简 4.5 年学制.<br />
-                    <span class="text-[#D22027]">零脱产 · 无缝衔接.</span>
+                <div class="inline-block bg-white text-[#D22027] px-3 py-1 text-xs font-bold tracking-widest uppercase mb-4 rounded-sm self-start lang-text" data-zh="2+0.5+2 融合培养模式" data-en="2+0.5+2 Integrated Model">2+0.5+2 融合培养模式</div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tight mb-4 leading-tight lang-html" 
+                    data-zh="极简 4.5 年学制.<br /><span class='text-[#D22027]'>零脱产 · 无缝衔接.</span>" 
+                    data-en="Streamlined 4.5 Years.<br /><span class='text-[#D22027]'>Seamless Integration.</span>">
+                    极简 4.5 年学制.<br /><span class="text-[#D22027]">零脱产 · 无缝衔接.</span>
                 </h1>
-                <p class="mt-4 text-lg md:text-2xl text-gray-200 max-w-2xl font-light mb-10">
+                <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl font-light mb-10 lang-text" 
+                   data-zh="国内植入 AQF 基础课程，澳洲小班授课平稳过渡。彻底消除“水土不服”，告别“一考定终身”。" 
+                   data-en="AQF foundation courses delivered domestically, followed by smooth transition via small classes in Australia. Eliminate exam anxiety.">
                     国内植入 AQF 基础课程，澳洲小班授课平稳过渡。彻底消除“水土不服”，告别“一考定终身”。
                 </p>
-                <a href="#model" class="self-start bg-[#D22027] text-white font-bold text-lg px-8 py-4 uppercase tracking-wider hover:bg-[#b01a20] transition shadow-lg">
-                    查看培养模式
-                </a>
             </div>
         </div>
 
@@ -116,66 +120,66 @@
     <section id="dilemma" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-12">
-                <h2 class="text-4xl font-black text-[#333333] uppercase">传统升学痛点</h2>
+                <h2 class="text-3xl md:text-4xl font-black text-[#333333] uppercase lang-text" data-zh="传统升学痛点" data-en="Traditional Challenges">传统升学痛点</h2>
                 <div class="h-1 w-20 bg-[#D22027] mt-4"></div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="p-8 bg-gray-50 border border-gray-200 hover:border-[#D22027] transition group">
-                    <h3 class="text-2xl font-bold text-[#333333] mb-3 group-hover:text-[#D22027] transition">竞争白热化</h3>
-                    <p class="text-gray-600">升学路径同质化严重，名校保底率难突破。学校面临生源流失与品牌竞争力下降的双重压力。</p>
+                    <h3 class="text-xl font-bold text-[#333333] mb-3 group-hover:text-[#D22027] transition lang-text" data-zh="竞争白热化" data-en="Fierce Competition">竞争白热化</h3>
+                    <p class="text-gray-600 text-sm lang-text" data-zh="升学路径同质化严重，名校保底率难突破。学校面临生源流失与品牌竞争力下降的双重压力。" data-en="Homogenized pathways make securing top university offers difficult. Schools face student loss and brand decline.">升学路径同质化严重，名校保底率难突破。学校面临生源流失与品牌竞争力下降的双重压力。</p>
                 </div>
                 <div class="p-8 bg-gray-50 border border-gray-200 hover:border-[#D22027] transition group">
-                    <h3 class="text-2xl font-bold text-[#333333] mb-3 group-hover:text-[#D22027] transition">一考定终身风险高</h3>
-                    <p class="text-gray-600">容错率极低，传统留学落榜降级风险高，无法为全体学生提供有效路径，家庭焦虑加剧。</p>
+                    <h3 class="text-xl font-bold text-[#333333] mb-3 group-hover:text-[#D22027] transition lang-text" data-zh="一考定终身风险" data-en="High Exam Risks">一考定终身风险</h3>
+                    <p class="text-gray-600 text-sm lang-text" data-zh="容错率极低，传统留学落榜降级风险高，无法为全体学生提供有效路径，家庭焦虑加剧。" data-en="Low margin for error. Traditional study abroad has high failure risks, causing severe anxiety for families.">容错率极低，传统留学落榜降级风险高，无法为全体学生提供有效路径，家庭焦虑加剧。</p>
                 </div>
                 <div class="p-8 bg-gray-50 border border-gray-200 hover:border-[#D22027] transition group">
-                    <h3 class="text-2xl font-bold text-[#333333] mb-3 group-hover:text-[#D22027] transition">资金门槛极高</h3>
-                    <p class="text-gray-600">传统留学动辄数十万预付资金，成为签约最大卡点。客户转化周期长达 6-12 个月。</p>
+                    <h3 class="text-xl font-bold text-[#333333] mb-3 group-hover:text-[#D22027] transition lang-text" data-zh="资金门槛极高" data-en="High Financial Barriers">资金门槛极高</h3>
+                    <p class="text-gray-600 text-sm lang-text" data-zh="传统留学动辄数十万预付资金，成为签约最大卡点。客户转化周期长达 6-12 个月。" data-en="Hundreds of thousands in upfront fees act as a major barrier, extending client conversion cycles to 6-12 months.">传统留学动辄数十万预付资金，成为签约最大卡点。客户转化周期长达 6-12 个月。</p>
                 </div>
                 <div class="p-8 bg-gray-50 border border-gray-200 hover:border-[#D22027] transition group">
-                    <h3 class="text-2xl font-bold text-[#333333] mb-3 group-hover:text-[#D22027] transition">科技资源匮乏</h3>
-                    <p class="text-gray-600">学校科创特色难以打造，IT/AI课程体系不完善，错失培养未来科技人才的关键窗口期。</p>
+                    <h3 class="text-xl font-bold text-[#333333] mb-3 group-hover:text-[#D22027] transition lang-text" data-zh="科技资源匮乏" data-en="Lack of Tech Resources">科技资源匮乏</h3>
+                    <p class="text-gray-600 text-sm lang-text" data-zh="学校科创特色难以打造，IT/AI课程体系不完善，错失培养未来科技人才的关键窗口期。" data-en="Schools struggle to build tech features. Inadequate IT/AI curricula miss the window to nurture future talent.">学校科创特色难以打造，IT/AI课程体系不完善，错失培养未来科技人才的关键窗口期。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="advantages" class="py-20 bg-[#f4f4f4] border-t border-b border-gray-200">
+    <section id="advantages" class="py-20 bg-[#f4f4f4] border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-12">
-                <h2 class="text-4xl font-black text-[#333333] uppercase">六大核心优势</h2>
+                <h2 class="text-3xl md:text-4xl font-black text-[#333333] uppercase lang-text" data-zh="六大核心优势" data-en="Six Core Advantages">六大核心优势</h2>
                 <div class="h-1 w-20 bg-[#D22027] mt-4"></div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white p-8 shadow-sm">
                     <div class="text-[#D22027] font-black text-2xl mb-2">01.</div>
-                    <h3 class="text-xl font-bold text-[#333333] mb-3">官方联合双录取</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">一次提交申请，斩获 TAFE SA 前置课程与阿德莱德大学本科联合录取，100% 锁定百强名校。</p>
+                    <h3 class="text-xl font-bold text-[#333333] mb-3 lang-text" data-zh="官方联合双录取" data-en="Official Joint Offer">官方联合双录取</h3>
+                    <p class="text-gray-600 text-sm lang-text" data-zh="一次提交申请，斩获 TAFE SA 前置课程与阿德莱大学联合录取，100% 锁定百强名校。" data-en="Submit one application, receive joint offers from TAFE SA and Adelaide University. 100% guarantee for a Top 100 Uni.">一次提交申请，斩获 TAFE SA 前置课程与阿德莱大学联合录取，100% 锁定百强名校。</p>
                 </div>
                 <div class="bg-white p-8 shadow-sm">
                     <div class="text-[#D22027] font-black text-2xl mb-2">02.</div>
-                    <h3 class="text-xl font-bold text-[#333333] mb-3">重磅资金红利</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">首付低至 7.5K-10.6K 澳币，本科阶段零押金，资金门槛直降 80%。高二即走，省时 1-2 年。</p>
+                    <h3 class="text-xl font-bold text-[#333333] mb-3 lang-text" data-zh="重磅资金红利" data-en="Massive Financial Benefits">重磅资金红利</h3>
+                    <p class="text-gray-600 text-sm lang-text" data-zh="首付低至 7.5K-10.6K 澳币，本科阶段零押金，资金门槛直降 80%。" data-en="Initial payment as low as 7.5K-10.6K AUD. Zero deposit for the bachelor stage. Financial threshold reduced by 80%.">首付低至 7.5K-10.6K 澳币，本科阶段零押金，资金门槛直降 80%。</p>
                 </div>
                 <div class="bg-white p-8 shadow-sm">
                     <div class="text-[#D22027] font-black text-2xl mb-2">03.</div>
-                    <h3 class="text-xl font-bold text-[#333333] mb-3">赋能国内高中</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">零重资产投入，澳洲 AQF 课程直接植入校本教学，拉升办学实力，打造区域标杆。</p>
+                    <h3 class="text-xl font-bold text-[#333333] mb-3 lang-text" data-zh="赋能国内高中" data-en="Empowering High Schools">赋能国内高中</h3>
+                    <p class="text-gray-600 text-sm lang-text" data-zh="零重资产投入，澳洲 AQF 课程直接植入校本教学，拉升办学实力，打造区域标杆。" data-en="Zero heavy asset investment. AQF courses directly integrated into domestic curricula to boost school prestige.">零重资产投入，澳洲 AQF 课程直接植入校本教学，拉升办学实力，打造区域标杆。</p>
                 </div>
                 <div class="bg-white p-8 shadow-sm">
                     <div class="text-[#D22027] font-black text-2xl mb-2">04.</div>
-                    <h3 class="text-xl font-bold text-[#333333] mb-3">AQF 课程国内学</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">提前开设 IT/AI 先导课程，全英文环境培养学术逻辑，彻底免除赴澳后的“水土不服”。</p>
+                    <h3 class="text-xl font-bold text-[#333333] mb-3 lang-text" data-zh="AQF 课程国内学" data-en="Domestic AQF Study">AQF 课程国内学</h3>
+                    <p class="text-gray-600 text-sm lang-text" data-zh="提前开设 IT/AI 先导课程，全英文环境培养学术逻辑，免除赴澳后水土不服。" data-en="Early access to IT/AI courses. English academic environment eliminates culture shock upon arrival in Australia.">提前开设 IT/AI 先导课程，全英文环境培养学术逻辑，免除赴澳后水土不服。</p>
                 </div>
                 <div class="bg-white p-8 shadow-sm">
                     <div class="text-[#D22027] font-black text-2xl mb-2">05.</div>
-                    <h3 class="text-xl font-bold text-[#333333] mb-3">零终考风险</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">以国内 AQF 课程作业的过程性评估替代 A-Level/VCE 等统一终考，达到基础门槛即 100% 录取。</p>
+                    <h3 class="text-xl font-bold text-[#333333] mb-3 lang-text" data-zh="零终考风险" data-en="Zero Final Exam Risk">零终考风险</h3>
+                    <p class="text-gray-600 text-sm lang-text" data-zh="以过程性评估替代 A-Level/VCE 等统一终考，达到基础门槛即 100% 录取。" data-en="Replace unified exams like A-Level/VCE with progressive assessment. Reach the baseline for 100% admission.">以过程性评估替代 A-Level/VCE 等统一终考，达到基础门槛即 100% 录取。</p>
                 </div>
                 <div class="bg-white p-8 shadow-sm">
                     <div class="text-[#D22027] font-black text-2xl mb-2">06.</div>
-                    <h3 class="text-xl font-bold text-[#333333] mb-3">双金牌资质护航</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">中留服完全官方认证；专业直通 ACS (澳洲计算机协会) 或 EA (澳洲工程师协会) 完全认证。</p>
+                    <h3 class="text-xl font-bold text-[#333333] mb-3 lang-text" data-zh="双金牌资质护航" data-en="Dual Gold-Standard">双金牌资质护航</h3>
+                    <p class="text-gray-600 text-sm lang-text" data-zh="中留服完全认证；专业直通 ACS (计算机) 或 EA (工程师) 认证，就业无忧。" data-en="Fully accredited by CSCSE. Direct pathway to ACS (IT) or EA (Engineering) certifications for global employability.">中留服完全认证；专业直通 ACS (计算机) 或 EA (工程师) 认证，就业无忧。</p>
                 </div>
             </div>
         </div>
@@ -184,50 +188,34 @@
     <section id="pathways" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-12">
-                <h2 class="text-4xl font-black text-[#333333] uppercase">精英升学矩阵</h2>
+                <h2 class="text-3xl md:text-4xl font-black text-[#333333] uppercase lang-text" data-zh="精英升学矩阵" data-en="Elite Pathways">精英升学矩阵</h2>
                 <div class="h-1 w-20 bg-[#D22027] mt-4"></div>
             </div>
+            
             <div class="bg-[#333333] text-white p-10 mb-8 border-l-8 border-[#D22027]">
-                <div class="flex flex-col md:flex-row justify-between md:items-center mb-6">
-                    <div>
-                        <span class="text-[#D22027] font-bold tracking-widest uppercase text-sm mb-2 block">王牌赛道 FLAGSHIP PROGRAM</span>
-                        <h3 class="text-3xl font-black">高精尖 IT 直通车</h3>
-                    </div>
-                    <div class="mt-4 md:mt-0 bg-white/10 px-4 py-2 text-sm font-bold">2年国内 + 2.5年澳洲本校</div>
+                <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
+                    <h3 class="text-3xl font-black lang-text" data-zh="高精尖 IT 直通车" data-en="Elite IT Pathway">高精尖 IT 直通车</h3>
+                    <div class="mt-4 md:mt-0 bg-white/10 px-4 py-2 text-sm font-bold lang-text" data-zh="2年国内 + 2.5年澳洲" data-en="2 Yrs Domestic + 2.5 Yrs AU">2年国内 + 2.5年澳洲</div>
                 </div>
-                <p class="text-gray-300 mb-6 max-w-3xl leading-relaxed">
-                    跳过高三与预科，紧握 AI 时代红利。覆盖网络与网络安全 (移民高分)、软件开发、云计算体系、游戏开发。
-                    直通 ACS 认证，毕业起薪高达 8-12 万澳币。
-                </p>
+                <p class="text-gray-300 leading-relaxed lang-text" data-zh="跳过高三与预科，紧握 AI 时代红利。覆盖网络安全、软件开发等。直通 ACS 认证，毕业起薪 8-12 万澳币。" data-en="Skip Year 12. Seize the AI era. Covers Cyber Security, Software Dev. ACS accredited, starting salary 80K-120K AUD.">跳过高三与预科，紧握 AI 时代红利。覆盖网络安全、软件开发等。直通 ACS 认证，毕业起薪 8-12 万澳币。</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="border border-gray-200 p-8">
-                    <h3 class="text-2xl font-bold text-[#333333] mb-2">极速商科通道</h3>
-                    <p class="text-[#D22027] font-bold mb-4">3 年制 · 高效拿证</p>
-                    <ul class="text-gray-600 text-sm space-y-2">
-                        <li><strong>路径:</strong> 1年文凭 + 2年阿大商业(营销)学士。</li>
-                        <li>培养国际化营销与顶级管理能力。</li>
-                        <li>就业场景广泛：跨国企业、互联网公司、咨询机构。</li>
-                    </ul>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="border border-gray-200 p-8 shadow-sm">
+                    <h3 class="text-2xl font-bold text-[#333333] mb-2 lang-text" data-zh="极速商科通道" data-en="Fast-Track Business">极速商科通道</h3>
+                    <p class="text-[#D22027] font-bold mb-4 lang-text" data-zh="3 年制 · 高效拿证" data-en="3-Year Program · High Efficiency">3 年制 · 高效拿证</p>
+                    <p class="text-gray-600 text-sm lang-text" data-zh="1年文凭 + 2年商业(营销)学士。培养国际化营销与顶级管理能力，就业覆盖跨国企业与咨询机构。" data-en="1-Yr Diploma + 2-Yr Bachelor of Business. Develop international marketing and management skills.">1年文凭 + 2年商业(营销)学士。培养国际化营销与顶级管理能力，就业覆盖跨国企业与咨询机构。</p>
                 </div>
-                <div class="border border-gray-200 p-8">
-                    <h3 class="text-2xl font-bold text-[#333333] mb-2">硬核工程通道</h3>
-                    <p class="text-[#D22027] font-bold mb-4">2+2 EA 双认证 · 移民优选</p>
-                    <ul class="text-gray-600 text-sm space-y-2">
-                        <li><strong>路径:</strong> 2年工程副学士 + 2年阿大工程学士。</li>
-                        <li>覆盖土木、机械、电气、电子、生物医学。</li>
-                        <li>副学士阶段即获 EA 认证，澳洲技术移民优先。</li>
-                    </ul>
+                <div class="border border-gray-200 p-8 shadow-sm">
+                    <h3 class="text-2xl font-bold text-[#333333] mb-2 lang-text" data-zh="硬核工程通道" data-en="Hardcore Engineering">硬核工程通道</h3>
+                    <p class="text-[#D22027] font-bold mb-4 lang-text" data-zh="2+2 双认证 · 移民优选" data-en="2+2 Dual Cert · Immigration Preferred">2+2 双认证 · 移民优选</p>
+                    <p class="text-gray-600 text-sm lang-text" data-zh="2年副学士 + 2年工程学士。覆盖机械、电气、生物医学。副学士阶段即获 EA 认证，技术移民优先。" data-en="2-Yr Assoc. Degree + 2-Yr Bachelor of Engineering. EA Accredited at Associate stage. Preferred for migration.">2年副学士 + 2年工程学士。覆盖机械、电气、生物医学。副学士阶段即获 EA 认证，技术移民优先。</p>
                 </div>
-                <div class="border border-gray-200 p-8 bg-[#f9f9f9]">
-                    <h3 class="text-2xl font-bold text-[#333333] mb-2">终极国际红利</h3>
-                    <p class="text-[#D22027] font-bold mb-4">最高 3 年 485 工签</p>
-                    <ul class="text-gray-600 text-sm space-y-2">
-                        <li>依托南澳偏远地区专属政策，工签时间拉满。</li>
-                        <li>对比悉尼/墨尔本多出 1-2 年国际顶尖市场工作经验。</li>
-                        <li>留学 + 就业 + 移民一站式规划。</li>
-                    </ul>
-                </div>
+            </div>
+            
+            <div class="border border-[#D22027] bg-[#D22027]/5 p-8 text-center">
+                 <h3 class="text-2xl font-bold text-[#D22027] mb-2 lang-text" data-zh="终极国际红利：最高 3 年 485 工签" data-en="Ultimate Benefit: Up to 3 Yrs 485 Visa">终极国际红利：最高 3 年 485 工签</h3>
+                 <p class="text-gray-700 text-sm lang-text" data-zh="依托南澳专属政策，对比悉尼/墨尔本多出 1-2 年国际顶尖市场工作经验，实现留学+就业+移民一站式规划。" data-en="Leverage South Australia's policies for 1-2 extra years of post-study work rights compared to Sydney/Melbourne.">依托南澳专属政策，对比悉尼/墨尔本多出 1-2 年国际顶尖市场工作经验，实现留学+就业+移民一站式规划。</p>
             </div>
         </div>
     </section>
@@ -235,52 +223,50 @@
     <section id="model" class="py-20 bg-[#333333] text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-12 text-center">
-                <h2 class="text-4xl font-black uppercase">2+0.5+2 融合培养模式</h2>
+                <h2 class="text-3xl md:text-4xl font-black uppercase lang-text" data-zh="2+0.5+2 融合培养模式" data-en="2+0.5+2 Integrated Study Model">2+0.5+2 融合培养模式</h2>
                 <div class="h-1 w-20 bg-[#D22027] mt-4 mx-auto"></div>
-                <p class="mt-4 text-gray-400">极简 4.5 年直通 Go8 世界百强名校</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white/5 p-8 border border-white/10 text-center">
-                    <div class="text-[#D22027] text-4xl font-black mb-4">2 年</div>
-                    <h4 class="text-xl font-bold mb-4 text-white">国内高中阶段</h4>
-                    <p class="text-gray-400 text-sm">无需脱产，无缝衔接。完成 AQF 3-4 级基础课程，语言达标，获取 TAFE SA 文凭。</p>
+                    <div class="text-[#D22027] text-4xl font-black mb-4 lang-text" data-zh="2 年" data-en="2 Yrs">2 年</div>
+                    <h4 class="text-xl font-bold mb-4 lang-text" data-zh="国内高中阶段" data-en="Domestic High School">国内高中阶段</h4>
+                    <p class="text-gray-400 text-sm lang-text" data-zh="无需脱产。完成 AQF 3-4 级基础课程，获取 TAFE SA 文凭。" data-en="No need to leave school early. Complete AQF 3-4 foundation courses, earn TAFE SA Diploma.">无需脱产。完成 AQF 3-4 级基础课程，获取 TAFE SA 文凭。</p>
                 </div>
                 <div class="bg-white/5 p-8 border border-white/10 text-center">
-                    <div class="text-[#D22027] text-4xl font-black mb-4">0.5 年</div>
-                    <h4 class="text-xl font-bold mb-4 text-white">平稳过渡期</h4>
-                    <p class="text-gray-400 text-sm">澳洲第一阶段。小班精英授课，中文双语助教全程陪伴，安心适应全英文大学学术环境。</p>
+                    <div class="text-[#D22027] text-4xl font-black mb-4 lang-text" data-zh="0.5 年" data-en="0.5 Yrs">0.5 年</div>
+                    <h4 class="text-xl font-bold mb-4 lang-text" data-zh="平稳过渡期" data-en="Smooth Transition">平稳过渡期</h4>
+                    <p class="text-gray-400 text-sm lang-text" data-zh="澳洲小班精英授课，双语助教陪伴，安心适应全英文大学环境。" data-en="Small elite classes in Australia with bilingual tutors for an easy transition to an English academic environment.">澳洲小班精英授课，双语助教陪伴，安心适应全英文大学环境。</p>
                 </div>
-                <div class="bg-[#D22027] p-8 text-center shadow-lg transform md:-translate-y-2">
-                    <div class="text-white text-4xl font-black mb-4">2 年</div>
-                    <h4 class="text-xl font-bold mb-4 text-white">名校本科阶段</h4>
-                    <p class="text-white/90 text-sm">无缝直升阿德莱德大学 (QS 82)。共享八大名校科研资源，获取全球认可的百强学士学位。</p>
+                <div class="bg-[#D22027] p-8 text-center shadow-lg md:-translate-y-2">
+                    <div class="text-white text-4xl font-black mb-4 lang-text" data-zh="2 年" data-en="2 Yrs">2 年</div>
+                    <h4 class="text-xl font-bold mb-4 lang-text" data-zh="名校本科阶段" data-en="Top University">名校本科阶段</h4>
+                    <p class="text-white/90 text-sm lang-text" data-zh="直升阿德莱德大学 (QS 82)。获取全球认可的百强学士学位。" data-en="Direct entry to Adelaide University (QS 82). Earn a globally recognized Top 100 Bachelor's Degree.">直升阿德莱德大学 (QS 82)。获取全球认可的百强学士学位。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-[#D22027] text-white text-center">
+    <section id="contact" class="py-24 bg-white text-center border-t border-gray-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6">抢占首批官方 MOU 合作红利</h2>
-            <p class="text-xl text-white/90 mb-10 font-medium">为国内高中与留学机构量身定制，打造无死角“护城河”产品。</p>
-            <div class="bg-white text-[#333333] p-10 md:p-14 shadow-2xl inline-block w-full">
-                <p class="text-[#D22027] font-bold tracking-widest uppercase mb-4 text-sm">独家授权合作洽谈</p>
-                <div class="text-4xl md:text-6xl font-black mb-4">186 5364 0006</div>
-                <div class="text-xl font-bold text-gray-600">联系人：宋老师</div>
+            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tight mb-6 text-[#333333] lang-text" data-zh="抢占首批官方 MOU 合作红利" data-en="Secure the Official MOU Partnership">抢占首批官方 MOU 合作红利</h2>
+            <div class="bg-gray-50 border border-gray-200 p-10 md:p-14 shadow-lg inline-block w-full">
+                <p class="text-gray-500 font-bold tracking-widest uppercase mb-4 text-sm lang-text" data-zh="独家授权合作洽谈" data-en="Exclusive Partnership Inquiry">独家授权合作洽谈</p>
+                <div class="text-4xl md:text-6xl font-black mb-4 text-[#D22027]">186 5364 0006</div>
+                <div class="text-xl font-bold text-gray-700 lang-text" data-zh="联系人：宋老师" data-en="Contact: Mr./Ms. Song">联系人：宋老师</div>
             </div>
         </div>
     </section>
 
     <footer class="bg-[#222222] py-12">
         <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
-            <p class="font-bold text-gray-400 mb-2 uppercase tracking-wide">独家运营单位：潍坊澳腾启航留学咨询服务有限公司</p>
-            <p class="mb-6 uppercase text-xs">Weifang Ao Teng Overseas Education Services Pty. Ltd.</p>
-            <div class="w-full h-px bg-gray-800 mb-6"></div>
+            <p class="font-bold text-gray-400 mb-2 uppercase tracking-wide lang-text" data-zh="独家运营单位：潍坊澳腾启航留学咨询服务有限公司" data-en="Exclusive Operator: Weifang Ao Teng Overseas Education Services">独家运营单位：潍坊澳腾启航留学咨询服务有限公司</p>
+            <p class="mb-6 uppercase text-[10px] tracking-widest">Weifang Ao Teng Overseas Education Services Pty. Ltd.</p>
             <p>© 2026. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
+        // 幻灯片逻辑
         document.addEventListener('DOMContentLoaded', () => {
             const totalSlides = 3;
             let currentSlide = 0;
@@ -290,38 +276,45 @@
                 for (let i = 0; i < totalSlides; i++) {
                     const slide = document.getElementById(`slide-${i}`);
                     const dot = document.getElementById(`dot-${i}`);
-                    
                     if (i === index) {
-                        slide.classList.remove('slide-inactive');
-                        slide.classList.add('slide-active');
-                        dot.classList.remove('bg-white/50');
-                        dot.classList.add('bg-white');
+                        slide.classList.replace('slide-inactive', 'slide-active');
+                        dot.classList.replace('bg-white/50', 'bg-white');
                     } else {
-                        slide.classList.remove('slide-active');
-                        slide.classList.add('slide-inactive');
-                        dot.classList.remove('bg-white');
-                        dot.classList.add('bg-white/50');
+                        slide.classList.replace('slide-active', 'slide-inactive');
+                        dot.classList.replace('bg-white', 'bg-white/50');
                     }
                 }
             }
 
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                updateSlide(currentSlide);
-            }
-
-            // 暴露给全局，供点击导航点使用
             window.goToSlide = function(index) {
                 currentSlide = index;
                 updateSlide(currentSlide);
-                // 重置定时器，防止刚点击就立刻跳下一张
                 clearInterval(slideInterval);
-                slideInterval = setInterval(nextSlide, 5000);
+                slideInterval = setInterval(() => { currentSlide = (currentSlide + 1) % totalSlides; updateSlide(currentSlide); }, 5000);
             };
 
-            // 每 5 秒自动切换
-            slideInterval = setInterval(nextSlide, 5000);
+            slideInterval = setInterval(() => { currentSlide = (currentSlide + 1) % totalSlides; updateSlide(currentSlide); }, 5000);
         });
+
+        // 极轻量双语切换逻辑
+        let currentLang = 'zh';
+        function toggleLang() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            
+            // 更新按钮文本
+            const btn = document.getElementById('langToggleBtn');
+            btn.innerHTML = currentLang === 'zh' ? '<span>🌐</span> English' : '<span>🌐</span> 中文';
+            
+            // 更新纯文本节点
+            document.querySelectorAll('.lang-text').forEach(el => {
+                el.innerText = el.getAttribute(`data-${currentLang}`);
+            });
+            
+            // 更新带有 HTML 标签的节点 (如 <br>)
+            document.querySelectorAll('.lang-html').forEach(el => {
+                el.innerHTML = el.getAttribute(`data-${currentLang}`);
+            });
+        }
     </script>
 </body>
 </html>
